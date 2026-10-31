@@ -1,14 +1,17 @@
 ---
 name: deepseen-commerce-director-lite
 description: 主要面向TikTok跨境卖家，根据用户提供的商品事实与目标，整理带货脚本和导演分镜，保留确认原稿，给出关键动作、时间窗和成片验收要求。已有成片要审核时交成品质检技能；不自动制作或发布。
+  Create commerce scripts and observable storyboards from supplied facts or an unchanged
+  confirmed script. No automatic production or publication. 带货剧本与导演
 license: MIT
 metadata:
-  runtime_requirements: "需要可处理文字的宿主智能体；没有专用DeepSeen工具也能交付文字方案。"
-  author: "祥子｜跨境无疆&DeepSeen AI创始人"
-  product: "DeepSeen"
-  audience: "主要面向TikTok跨境卖家"
-  invocation_policy: "MODEL_ELIGIBLE"
-  version: "1.1.0"
+  runtime_requirements: 需要可处理文字的宿主智能体；没有专用DeepSeen工具也能交付文字方案。
+  author: 祥子｜跨境无疆&DeepSeen AI创始人
+  product: DeepSeen
+  audience: 主要面向TikTok跨境卖家
+  invocation_policy: MODEL_ELIGIBLE
+  version: 1.1.1
+  languages: zh-CN, en
 ---
 
 # 带货剧本与导演简版
@@ -40,3 +43,8 @@ metadata:
 ## 商品与复盘交接
 
 接受选品参谋交来的商品事实、目标市场与受众；初筛假设不变成已证卖点。TikTok场景不强制套固定时长、镜头或销售承诺。只在明确要求时规划带货口播，不能替用户自动发布。实际素材反馈仅修订对应段落，保留确认稿和成功片段。见[交接字段](references/handoff.md)。
+
+
+## 语言入口
+
+默认以简体中文交付。用户使用英文或明确要求英文时，读取[English instructions](SKILL.en.md)及其链接的英文资料，按用户语言输出；不改变确认稿原文或数字，也不需要另装一个Skill。工具默认中文，英文报告显式使用`--lang en`。

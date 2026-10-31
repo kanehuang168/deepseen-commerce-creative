@@ -1,14 +1,17 @@
 ---
 name: deepseen-asset-quality-audit
 description: 主要面向TikTok跨境卖家，对实际生成的视频或图片做商品与交付检查；视频脚本可核对文件可解码性、音轨事实、确认要求与观察关联。用于成品审核，不用于证明市场效果或仅审导演方案。
+  Review actual authorized media using technical checks and trustworthy observation,
+  not a creator self-rating. Missing evidence stays unverified. 成品质检
 license: MIT
 metadata:
-  runtime_requirements: "视频技术检查需要Python 3.10+及PATH中的ffprobe、ffmpeg；语义审核需要真实视听能力或可靠人工观察。"
-  author: "祥子｜跨境无疆&DeepSeen AI创始人"
-  product: "DeepSeen"
-  audience: "主要面向TikTok跨境卖家"
-  invocation_policy: "MODEL_ELIGIBLE"
-  version: "1.1.0"
+  runtime_requirements: 视频技术检查需要Python 3.10+及PATH中的ffprobe、ffmpeg；语义审核需要真实视听能力或可靠人工观察。
+  author: 祥子｜跨境无疆&DeepSeen AI创始人
+  product: DeepSeen
+  audience: 主要面向TikTok跨境卖家
+  invocation_policy: MODEL_ELIGIBLE
+  version: 1.1.1
+  languages: zh-CN, en
 ---
 
 # 成品质检
@@ -42,3 +45,8 @@ python -X utf8 skills/deepseen-asset-quality-audit/scripts/check_media_review.py
 ## TikTok成片与反馈交接
 
 按目标市场、用户确认的字幕/语言、商品数量与展示动作检查；没有平台当前规则依据时不声称平台审核必过。把已证缺陷交回导演或制作，把缺观察留待核验；不要要求为重审重新选品。投放数据不能替代成品检查。见[交接字段](references/handoff.md)。
+
+
+## 语言入口
+
+默认以简体中文交付。用户使用英文或明确要求英文时，读取[English instructions](SKILL.en.md)及其链接的英文资料，按用户语言输出；不改变确认稿原文或数字，也不需要另装一个Skill。工具默认中文，英文报告显式使用`--lang en`。

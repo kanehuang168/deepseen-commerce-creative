@@ -130,23 +130,36 @@ def check_review(media, review):
                 noticeZh='仅验证实际媒体技术事实和所供观察契约；不替代完整观看、听审、独立质量评审或用户确认。')
 
 
+
+REASONS_EN = {'成片或确认稿指纹不匹配，旧审核不能用于当前结果': 'The final media or confirmed-requirement hash does not match; the old review cannot cover this result.', '视频缺失或完整解码未通过': 'Video is missing or full decoding failed.', '实际视频完整解码通过；不代表内容合格': 'The actual video fully decoded; this does not establish content acceptance.', '实际没有音轨，与审核声称有人声相矛盾': 'No audio track exists, contradicting the claimed speech observation.', '无音轨符合明确静默要求；画面另行审核': 'No audio track matches the explicit silence requirement; visuals require separate review.', '确认要求的声音无法存在于无音轨成片中': 'Required sound cannot exist in a file without an audio track.', '完整听审记录未观察到确认要求的人声': 'The full listening record did not find the required speech.', '按完整音频观察记录核对；音轨存在本身不证明语义通过': 'Checked against full audio observations; track presence alone does not establish semantic acceptance.', '声音要求或全片声音观察不足；不把低音量当静默': 'Sound requirements or full audio observations are insufficient; low volume is not silence.', '缺少完整画面观察，不能宣布全片质量通过': 'Full visual observations are missing; whole-video quality cannot be declared passed.', '缺少确认要求及逐项观察，不自动判通过': 'Confirmed requirements and per-check observations are missing; no automatic pass.', '该项不属于当前确认要求，不据此判成片失败': 'This check is not applicable to the confirmed requirements.', '检查适用性或当前产物关联尚未确认': 'Check applicability or current-artifact binding is unconfirmed.', '缺少实际观察位置或证据，计划文字不能代替成片': 'Actual observation positions or evidence are missing; plans do not replace footage.', '关键事件尚无有效实际时间定位': 'The key event has no valid observed time.', '实际关键事件早于或晚于确认时间窗': 'The observed event is outside the confirmed timing window.', '实际观察记录存在与确认要求矛盾的缺陷': 'An actual observation records a defect conflicting with confirmed requirements.', '完整画面观察记录支持该项；仍以观察来源可靠性为限': 'Full visual observations support this check, subject to observation reliability.', '抽帧可发现缺陷，不能据此证明全片连续性通过': 'Sampled frames can show defects but cannot establish whole-video continuity.'}
+
+def english_receipt(result):
+    result = dict(result)
+    result["checks"] = [{**{k:v for k,v in row.items() if k != "reasonZh"}, "reasonEn": REASONS_EN[row["reasonZh"]]} for row in result["checks"]]
+    result.pop("noticeZh", None)
+    result["noticeEn"] = "Checks actual media technical facts and supplied observation contracts only; does not replace full viewing/listening, independent quality review or user confirmation."
+    return result
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--lang', choices=['zh-CN', 'en'], default='zh-CN')
     parser.add_argument('--media', type=Path, required=True)
     parser.add_argument('--review', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     if args.output.exists():
-        parser.error('回执已存在，不覆盖历史证据')
+        parser.error('Receipt already exists; history is not overwritten.' if args.lang == 'en' else '回执已存在，不覆盖历史证据')
     try:
         media = probe_media(args.media)
         result = check_review(media, json.loads(args.review.read_text(encoding='utf8')))
+        if args.lang == "en":
+            result = english_receipt(result)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         with args.output.open('x', encoding='utf8') as stream:
             json.dump(dict(media=media, review=result), stream, ensure_ascii=False, indent=2)
         print(result['status'])
     except (ValueError, OSError, subprocess.SubprocessError) as error:
-        print('媒体采集或检查失败：' + type(error).__name__)
+        print(('Media collection or review failed: ' if args.lang == 'en' else '媒体采集或检查失败：') + type(error).__name__)
         return 1
     return 0
 
