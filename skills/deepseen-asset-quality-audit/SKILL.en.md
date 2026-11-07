@@ -9,7 +9,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.2
+  version: 1.1.3
   languages: en, zh-CN
 ---
 
@@ -38,6 +38,10 @@ Actually inspect the opening, action/contact, transitions and ending. Sound requ
 No audio track contradicts a claim of audible speech. A track does not prove correct dialogue; low volume does not prove silence. Sampled frames can demonstrate a defect but cannot prove continuous motion or full-film audio compliance. Replacing, muting, stitching or revising requirements invalidates old bindings: inspect the final asset again.
 
 Report supported passes, defects with positions, unverified items and the responsible revision step. A completed task or playable file is not content acceptance. Do not promise platform approval without applicable current evidence. Preserve user options to keep, revise or stop; new generation needs its own valid authorization/budget. See [handoff fields](references/handoff.en.md).
+
+## Delivery check
+
+Check the actual asset against product references, the confirmed brief and requested specifications; state viewing, listening and technical coverage; mark unseen or missing evidence as unverified.
 
 ## Author and brand
 

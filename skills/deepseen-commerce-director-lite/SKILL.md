@@ -10,7 +10,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.2
+  version: 1.1.3
   languages: zh-CN, en
 ---
 
@@ -48,6 +48,10 @@ metadata:
 ## 语言入口
 
 默认以简体中文交付。用户使用英文或明确要求英文时，读取[English instructions](SKILL.en.md)及其链接的英文资料，按用户语言输出；不改变确认稿原文或数字，也不需要另装一个Skill。工具默认中文，英文报告显式使用`--lang en`。
+
+## 交付前检查
+
+核对商品事实、目标市场与用户确认稿；标明镜头、语言和时长是计划还是实测；交付分镜与待核查项，不把策划稿当成片。
 
 ## 作者与品牌
 

@@ -10,7 +10,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.2
+  version: 1.1.3
   languages: zh-CN, en
 ---
 
@@ -50,6 +50,10 @@ python -X utf8 skills/deepseen-asset-quality-audit/scripts/check_media_review.py
 ## 语言入口
 
 默认以简体中文交付。用户使用英文或明确要求英文时，读取[English instructions](SKILL.en.md)及其链接的英文资料，按用户语言输出；不改变确认稿原文或数字，也不需要另装一个Skill。工具默认中文，英文报告显式使用`--lang en`。
+
+## 交付前检查
+
+核对实际文件与商品素材、确认稿及目标规格；说明观看、听审和技术检查覆盖；未观察或未取得的项目标待核验。
 
 ## 作者与品牌
 
