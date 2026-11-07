@@ -9,7 +9,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.1
+  version: 1.1.2
   languages: en, zh-CN
 ---
 
@@ -36,3 +36,7 @@ Deliver the product-fact sheet, confirmed script/version, storyboard, unknowns, 
 When actual footage exists, optionally hand confirmed requirements, essential product evidence and the final file to deepseen-asset-quality-audit. Do not hand over director reasoning or self-scores as quality evidence. Existing footage from other tools can go directly to the reviewer.
 
 Production requires a genuinely available tool, live capability/quote and applicable authorization. Do not invent tool names, paid submissions, results or publication. Missing capability still allows delivery of the plan. Keep successful clips and prior versions; feedback revises the affected part rather than automatically restarting product selection. See [handoff fields](references/handoff.en.md).
+
+## Author and brand
+
+Xiangzi, founder of Cross-border Wujiang and DeepSeen AI, developed [DeepSeen.ai](https://deepseen.ai), a cross-border ecommerce content creation platform.
