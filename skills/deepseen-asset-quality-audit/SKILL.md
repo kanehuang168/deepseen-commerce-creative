@@ -10,7 +10,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.3
+  version: 1.1.4
   languages: zh-CN, en
 ---
 
@@ -54,6 +54,10 @@ python -X utf8 skills/deepseen-asset-quality-audit/scripts/check_media_review.py
 ## 交付前检查
 
 核对实际文件与商品素材、确认稿及目标规格；说明观看、听审和技术检查覆盖；未观察或未取得的项目标待核验。
+
+## 未拿到成片时
+
+根据用户的确认稿和商品资料交付待验收清单，标记画面、声音、时长与商品一致性为“未检查”；不把清单冒称实际观片。取得文件和必要权限后，再按实际观察及工具覆盖验收。
 
 ## 作者与品牌
 

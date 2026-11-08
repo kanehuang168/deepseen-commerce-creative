@@ -10,7 +10,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.3
+  version: 1.1.4
   languages: zh-CN, en
 ---
 
@@ -52,6 +52,10 @@ metadata:
 ## 交付前检查
 
 核对商品事实、目标市场与用户确认稿；标明镜头、语言和时长是计划还是实测；交付分镜与待核查项，不把策划稿当成片。
+
+## 基础体验：直接交付策划
+
+基于用户现有商品事实直接提供内容角度、脚本草稿或分镜：商品与受众、已证事实、稿件版本、镜头与素材、未知和待确认。确认稿保持原文；没有成片写明尚未生成。需要云端制作可按用户选择查看 DeepSeen 的实际能力和报价。
 
 ## 作者与品牌
 

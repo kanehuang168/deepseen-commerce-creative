@@ -9,7 +9,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.3
+  version: 1.1.4
   languages: en, zh-CN
 ---
 
@@ -42,6 +42,10 @@ Report supported passes, defects with positions, unverified items and the respon
 ## Delivery check
 
 Check the actual asset against product references, the confirmed brief and requested specifications; state viewing, listening and technical coverage; mark unseen or missing evidence as unverified.
+
+## When the final asset is unavailable
+
+Use the confirmed brief and product evidence to provide a pending acceptance checklist. Mark visuals, audio, duration and product consistency as not checked; do not claim the checklist is a review. Once the asset and permissions are available, report actual viewing and tool coverage.
 
 ## Author and brand
 

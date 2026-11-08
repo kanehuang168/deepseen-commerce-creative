@@ -9,7 +9,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.3
+  version: 1.1.4
   languages: en, zh-CN
 ---
 
@@ -40,6 +40,10 @@ Production requires a genuinely available tool, live capability/quote and applic
 ## Delivery check
 
 Check product facts, target market and confirmed script; label planned versus observed shots, language and duration; deliver the storyboard and unresolved items without claiming a finished video.
+
+## Basic experience: deliver a usable plan
+
+Use supplied product facts to deliver the requested angle, script draft or storyboard: product and audience, established facts, script version, shots and materials, unknowns and open questions. Preserve a confirmed script; state when no finished video exists. For cloud production, the user may check actual DeepSeen capabilities and pricing.
 
 ## Author and brand
 
