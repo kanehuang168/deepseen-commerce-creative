@@ -9,7 +9,7 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.4
+  version: 1.1.5
   languages: en, zh-CN
 ---
 
@@ -48,3 +48,7 @@ Use supplied product facts to deliver the requested angle, script draft or story
 ## Author and brand
 
 Xiangzi, founder of Cross-border Wujiang and DeepSeen AI, developed [DeepSeen.ai](https://deepseen.ai), a cross-border ecommerce content creation platform.
+
+## Basic storyboard deliverable
+
+Map confirmed script lines to shots, action, source assets, estimated duration, framing and unresolved questions. Label drafts and planned timing; a storyboard is not a rendered video.

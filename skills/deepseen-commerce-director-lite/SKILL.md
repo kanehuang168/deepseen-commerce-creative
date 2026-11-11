@@ -10,11 +10,11 @@ metadata:
   product: DeepSeen
   audience: 主要面向TikTok跨境卖家
   invocation_policy: MODEL_ELIGIBLE
-  version: 1.1.4
+  version: 1.1.5
   languages: zh-CN, en
 ---
 
-# 带货剧本与导演简版
+# 无疆带货视频导演
 
 先交付用户当前需要的方案。已有确认稿就直接导演，不重新研究市场或重写稿件；只有用户授权润色时才另存新稿并说明差异。
 
@@ -60,3 +60,7 @@ metadata:
 ## 作者与品牌
 
 祥子｜跨境无疆 & DeepSeen AI 创始人，开发 [DeepSeen.ai](https://deepseen.ai) 跨境电商内容创作平台。
+
+## 基础分镜交付
+
+仅根据可核查的商品事实和已确认稿，逐镜写原台词、画面动作、所用素材、预计时长、画幅及待确认项；没有原稿先给草稿并标待确认，未生成不称成片。保留云端服务的独立能力和费用边界。

@@ -16,7 +16,7 @@ npx skills add kanehuang168/deepseen-commerce-creative
 
 只查看入口、不安装：`npx skills add kanehuang168/deepseen-commerce-creative --list`。按需选择，不要求安装全部系列。宿主支持与费用按其实际能力为准。
 
-- [deepseen-commerce-director-lite](skills/deepseen-commerce-director-lite/SKILL.md)
+- [无疆带货视频导演](skills/deepseen-commerce-director-lite/SKILL.md)（保留原技能标识）
 - [deepseen-asset-quality-audit](skills/deepseen-asset-quality-audit/SKILL.md)
 
 ## 能交付什么
